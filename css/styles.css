@@ -1,0 +1,90 @@
+
+
+
+.father{
+    height: 779px;
+    width: 550px;
+    background-color: antiquewhite;
+}
+
+header{
+    font-family: "Inter";
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: #FFFFFF;
+    background-image: url("./images/header-img.jpg");
+    background-color: blueviolet;
+    height: 208px;
+    width: 550;
+    background-size: cover;
+    background-position-y: 90%;
+}
+
+header h1{
+    font-size: 42.79px;
+    font-weight: 900;
+    letter-spacing: -4.5%;
+    line-height: 23.8px;
+    padding-left: 42px;
+}
+
+header p{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-right: 46px;
+}
+
+.search-div{
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 462px;
+    height: 38px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    margin-top: -20px;
+}
+
+.search-div input{
+    border: none;
+    width: 293px;
+    font-family: "Inter";
+    color: #6B7280;
+    font-weight: 500;
+    font-size: 14px;
+ 
+}
+
+.search-div input:focus{
+    border: none;
+    outline: none;
+}
+
+.search-div button{
+    border: none;
+    background: none;
+    width: 120px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #374151;
+    font-weight: 500;
+    border-left: 1px solid #D1D5DB;
+    font-family: "Inter";
+    background-color: #F9FAFB;
+    margin: 0;
+    align-self: stretch;
+    height: 100%;
+}
+
+
+
+.search-div svg{
+    margin: 9px 8px 9px 13px;
+    align-self: center;
+}
+
+
+
