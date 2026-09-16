@@ -1,10 +1,10 @@
 
 
-
 .father{
     height: 779px;
     width: 550px;
-    background-color: antiquewhite;
+    overflow: hidden;
+    /* background-color: antiquewhite; */
 }
 
 header{
@@ -13,7 +13,7 @@ header{
     justify-content:space-between;
     align-items: center;
     color: #FFFFFF;
-    background-image: url("./images/header-img.jpg");
+    background-image: url("/images/header-img.jpg");
     background-color: blueviolet;
     height: 208px;
     width: 550;
@@ -80,11 +80,119 @@ header p{
 }
 
 
-
 .search-div svg{
     margin: 9px 8px 9px 13px;
     align-self: center;
 }
 
 
+/* movie card */
 
+main{
+    height: 571px;
+    max-height: 571px;
+    overflow-y: scroll;
+    overflow: hidden;
+    background-image: url("/images/no-data-initial.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.grid-card{
+    display: flex;
+    width: 462px;
+    margin: 0 auto;
+    font-family: "Inter";
+    line-height: 20px;
+    align-items: center;
+    margin-bottom: 20.59px;
+    border-bottom: 1.5px solid #E5E7EB;
+    padding-bottom: 20.59px;
+    margin-top: 21px;
+    
+}
+
+.grid-card:first-child{
+    margin-top: 44px;
+}
+
+.grid-card:last-child{
+    border-bottom: none;
+}
+
+.grid-card img{
+    margin-right: 21px;
+    height: 147.41px;
+    width: 99px;
+    object-fit: cover;
+}
+
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.movie-title{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.movie-title h2{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 8px 0 0;
+}
+
+.movie-title p{
+    font-size: 12px;
+    margin: 0;
+}
+
+.movie-title svg{
+    margin: 0 4px 0 0;
+}
+
+.movie-info{
+    display: flex;
+}
+
+/* movie info */
+
+.movie-info{
+color: #111827;
+font-size: 12px;
+align-items: center;
+}
+
+
+.minutes-label{
+    margin: 0;
+}
+
+.genre-label{
+    margin-left: 19px;
+    margin-right: 30px;
+    margin-top: 11px;
+    margin-bottom: 8px;
+
+}
+
+.watchlist-label{
+    margin: 0;
+}
+
+.movie-info svg{
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+
+.movie-description p{
+color: #6B7280;
+font-size: 14px;
+margin: 0;
+
+}
