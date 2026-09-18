@@ -33,6 +33,11 @@ header{
     color: rgb(255, 229, 63);
 }
 
+#watchlistEl a{
+    text-decoration: none;
+    color: inherit;
+}
+
 header h1{
     font-size: 42.79px;
     font-weight: 900;
@@ -40,6 +45,7 @@ header h1{
     line-height: 23.8px;
     padding-left: 42px;
 }
+
 
 header p{
     font-size: 14px;
@@ -105,11 +111,10 @@ header p{
 
 /* movie card */
 
-main{
-    height: 571px;
+.index-html main{
+    
     max-height: 571px;
     overflow-y: scroll;
-    overflow: hidden;
     background-image: url("/images/no-data-initial.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -143,6 +148,7 @@ main{
     height: 147.41px;
     width: 99px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .movie-card{
@@ -154,6 +160,7 @@ main{
 .movie-title{
     display: flex;
     align-items: center;
+
 }
 
 
@@ -162,6 +169,9 @@ main{
     font-size: 18px;
     font-weight: 500;
     margin: 0 8px 0 0;
+    max-width: 259px;
+    overflow-wrap: break-word;
+    
 }
 
 .movie-title p{
@@ -188,6 +198,7 @@ align-items: center;
 
 .minutes-label{
     margin: 0;
+    min-width: 42px;
 }
 
 .genre-label{
@@ -195,21 +206,91 @@ align-items: center;
     margin-right: 30px;
     margin-top: 11px;
     margin-bottom: 8px;
+    max-width: 160px;
+    overflow-wrap: break-word;
+    
+    
 
 }
 
-.watchlist-label{
-    margin: 0;
+.grid-card .watchlistIcon, .watchlist-label{
+    min-width: 16px;
+    max-width: 16px;
+    cursor: pointer;
+    
+}
+
+.grid-card .watchlist-label:hover{
+    color: #8bb1ff;
+    transform: scale(1.02);
+}
+
+.grid-card .watchlistIcon{
+    height: 16px;
+    width: 16px;
 }
 
 .movie-info svg{
     margin-right: 5px;
     margin-bottom: 0;
+    
+}
+
+.ratingLabel{
+    margin-left: -20;
 }
 
 .movie-description p{
 color: #6B7280;
 font-size: 14px;
 margin: 0;
+max-width: 342px;
+overflow-wrap: break-word;
 
+}
+
+/* watchlist html */
+
+.watchlist-body main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+
+}
+
+.empty-watchlist{
+    font-family: "Inter";
+    font-weight: 700;
+
+}
+
+.empty-watchlist h3{
+    text-align: center;
+    margin: 0;
+    color: #DFDDDD;
+    line-height: 28.5px;
+    font-size: 18px;
+    
+}
+
+.empty-watchlist h4, a{
+    font-size: 14px;
+    line-height: 20px;
+    
+    
+}
+
+.empty-watchlist span{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.empty-watchlist svg{
+    margin-right: 7px;
+    height: 18px;
+    width: 18px;
 }
