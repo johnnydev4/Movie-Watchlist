@@ -1,3 +1,5 @@
+let moviesArray = []
+let watchlist = []
 
 document.getElementById("form").addEventListener("submit", (e) => {
     e.preventDefault()
@@ -39,9 +41,13 @@ try{
 
     renderSearch(getMovies)
 
+    moviesArray.push(...getMovies)
+    console.log("movie array:",moviesArray)
+
 } catch (error){
     console.log("Error al buscar película", error)
 }
+
 
 
 }
@@ -70,7 +76,7 @@ function renderSearch (i){
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM9 5C9 4.44772 8.55228 4 8 4C7.44772 4 7 4.44772 7 5V7H5C4.44772 7 4 7.44771 4 8C4 8.55228 4.44772 9 5 9H7V11C7 11.5523 7.44772 12 8 12C8.55228 12 9 11.5523 9 11V9H11C11.5523 9 12 8.55228 12 8C12 7.44772 11.5523 7 11 7H9V5Z" fill="#111827"/>
                         </svg>
 
-                        <p class="watchlist-label">Watchlist</p>
+                        <p class="watchlist-label" data-id="${data.imdbID}"role="button">Watchlist</p>
                     </div> 
 
                     <div class="movie-description">
@@ -79,10 +85,31 @@ function renderSearch (i){
                 </div>
             </div>`
 
-    })
+    }).join("")
 
     html.innerHTML = render
     document.querySelector("main").style.backgroundImage ="none"
 
 }
+
+// guardar pelicula en el watchlist
+
+
+document.querySelector("main").addEventListener("click", (e) =>{
+
+    if (e.target.classList.contains("watchlist-label")){
+        const movieId = e.target.dataset.id
+        const choseFilm = moviesArray.find((peliculas) =>{
+            return peliculas.imdbID === movieId 
+        })
+        console.log("pelicula encontrada:", choseFilm)
+        watchlist.push(choseFilm)
+        console.log("el watchlist:",watchlist)
+        localStorage.setItem("savedMovies", JSON.stringify(watchlist))
+        e.target.textContent = "Added!"
+        
+    }
+
+
+})
 
