@@ -64,10 +64,6 @@ function renderStorage (i){
 
     }).join("")
 
-    if (!watchlist){
-
-
-    }
 
     html.innerHTML = render
     // document.querySelector(".empty-watchlist").style.display = "none"
@@ -97,7 +93,7 @@ function removeMovie(movie){
     })
 
     watchlist = filteredMovies
-    localStorage.setItem("savedMovie", JSON.stringify(watchlist))
+    localStorage.setItem("savedMovies", JSON.stringify(watchlist))
     renderStorage(watchlist)
 
 console.log("yeas",filteredMovies)

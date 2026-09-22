@@ -1,13 +1,32 @@
 
 body{
     background-color: antiquewhite;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.body-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    
 }
 
 .father{
+    margin: 30px auto;
     height: 779px;
     width: 550px;
     overflow: hidden;
     background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 header{
@@ -114,12 +133,21 @@ header p{
 .index-body main{
     
     max-height: 571px;
+    height: 571px;
     overflow-y: scroll;
+  
+}
+
+.index-body main::-webkit-scrollbar{
+    display: none;   
+}
+
+.empty-search{
     background-image: url("/images/no-data-initial.png");
     background-repeat: no-repeat;
     background-position: center;
+    height: 100%;
 }
-
 
 .grid-card{
     display: flex;
@@ -213,10 +241,17 @@ align-items: center;
 
 }
 
-.grid-card .watchlistIcon, .watchlist-label{
+.grid-card .watchlistIcon{
     min-width: 16px;
     max-width: 16px;
     cursor: pointer;
+    
+}
+
+.watchlist-label{
+    cursor: pointer;
+    max-width: 80px;
+    overflow-wrap: break-word;
     
 }
 

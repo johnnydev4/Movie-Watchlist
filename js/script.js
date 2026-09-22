@@ -1,5 +1,5 @@
 let moviesArray = []
-let watchlist = []
+let watchlist = JSON.parse(localStorage.getItem("savedMovies")) || []
 
 document.getElementById("form").addEventListener("submit", (e) => {
     e.preventDefault()
@@ -54,7 +54,7 @@ try{
 
 
 function renderSearch (i){
-    const html = document.querySelector("Main")
+    const html = document.querySelector("main")
 
     const render = i.map((data) =>{
     return `
@@ -97,8 +97,8 @@ function renderSearch (i){
 
 document.querySelector("main").addEventListener("click", (e) =>{
 
-    if (e.target.classList.contains("watchlist-label")){
-        const movieId = e.target.dataset.id
+    const movieId = e.target.dataset.id
+    if (e.target.classList.contains("watchlist-label") && !watchlist.some((result) => result.imdbID === movieId)){
         const choseFilm = moviesArray.find((peliculas) =>{
             return peliculas.imdbID === movieId 
         })
@@ -108,7 +108,7 @@ document.querySelector("main").addEventListener("click", (e) =>{
         localStorage.setItem("savedMovies", JSON.stringify(watchlist))
         e.target.textContent = "Added!"
         
-    }
+    } else {e.target.textContent = "On list"}
 
 
 })
