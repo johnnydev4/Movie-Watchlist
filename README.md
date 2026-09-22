@@ -4,10 +4,10 @@ A movie search and watchlist app built with HTML, CSS, and vanilla JavaScript �
 
 
 
-🔗 **Live demo:** [https://johnnydev4.github.io/Movie-Watchlist]
+
+🔗 **Live demo:** [https://johnnydev4.github.io/Movie-Watchlist/](https://johnnydev4.github.io/Movie-Watchlist/)
 
 
-<!-- Si lo publicás con GitHub Pages, pegá el link acá -->
 
 ## About
 
@@ -53,7 +53,7 @@ movie-watchlist/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/johnnydev4/movie-watchlist.git
+   git clone https://github.com/johnnydev4/Movie-Watchlist.git
    ```
 2. Open the folder in VS Code.
 3. Right-click `index.html` → **Open with Live Server**.
