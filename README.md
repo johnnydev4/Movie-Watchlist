@@ -3,7 +3,10 @@
 A movie search and watchlist app built with HTML, CSS, and vanilla JavaScript — my Scrimba solo project, powered by [The OMDB API](https://www.omdbapi.com/).
 
 
-🔗 **Live demo:** [https://github.com/johnnydev4/Movie-Watchlist]
+
+🔗 **Live demo:** [https://johnnydev4.github.io/Movie-Watchlist]
+
+
 <!-- Si lo publicás con GitHub Pages, pegá el link acá -->
 
 ## About
